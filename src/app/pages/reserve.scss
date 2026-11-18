@@ -1,0 +1,26 @@
+.wrap { padding-top: 160px; min-height: 100vh; }
+.two { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 7vw, 100px); align-items: start; }
+@media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+.intro { position: sticky; top: 120px; animation: rise 1s var(--ease) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(30px); } }
+.muted { color: var(--muted); } .muted a { color: var(--gold); }
+
+form, .confirm { border: 1px solid var(--line); background: var(--night-2); padding: clamp(24px, 4vw, 44px); display: grid; gap: 22px;
+  position: relative; animation: rise 1s .15s var(--ease) both; }
+form::before, .confirm::before { content: ''; position: absolute; inset: 8px; border: 1px solid var(--line); pointer-events: none; }
+label { display: grid; gap: 8px; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.opt { text-transform: none; letter-spacing: 0; color: var(--muted); }
+input, select, textarea { font: 17px var(--sans); color: var(--cream); background: transparent; border: none; border-bottom: 1px solid var(--line);
+  padding: 10px 0; outline: none; transition: border-color .3s; width: 100%; color-scheme: dark; }
+select option { background: var(--night); }
+input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+input.ng-invalid.ng-touched { border-color: #e2725b; }
+small { color: #f0947f; text-transform: none; letter-spacing: 0; font-size: 13px; animation: rise .3s var(--ease) both; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+form .btn { justify-self: start; margin-top: 8px; }
+
+.confirm h2 { font-size: 40px; }
+.confirm .urdu { font-size: 30px; line-height: 2; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 24px; margin: 0; }
+dt { color: var(--gold); letter-spacing: .2em; text-transform: uppercase; font-size: 13px; } dd { margin: 0; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; }
